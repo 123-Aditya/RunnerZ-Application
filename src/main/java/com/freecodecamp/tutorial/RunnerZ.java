@@ -32,6 +32,7 @@ public class RunnerZ {
 		LOG.info("Application started successfully!");
 	}
 	
+	
 	@Bean
 	CommandLineRunner runner() {
 		return args -> {
