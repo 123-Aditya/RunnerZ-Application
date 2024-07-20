@@ -41,35 +41,35 @@ public class RunController {
 	List<Run> findAll() {
 		return runRepository.findAll();
 	}
-	
-	@GetMapping("/{id}")
-	Run findById(@PathVariable Integer id) {
-		Optional<Run> run =  runRepository.findById(id);
-		if(run.isEmpty()) {
-			throw new RunNotFoundException();
-		}
-		
-		return run.get();
-	}
-	
-	@ResponseStatus(HttpStatus.CREATED)
-	@PostMapping("/createrun")
-	String createRun(@Valid @RequestBody Run run) {
-		runRepository.createRun(run);
-		return "Record created successfully";
-	}
-	
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@PutMapping("/updaterun/{id}")
-	String updateRun(@Valid @RequestBody Run run, @PathVariable Integer id) {
-		runRepository.updateRun(run, id);
-		return "Record updated successfully";
-	}
-	
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("/deleterun/{id}") 
-	String deleteRun(@PathVariable Integer id) {
-		runRepository.deleteRun(id);
-		return "Record deleted successfully";
-	}
+//	
+//	@GetMapping("/{id}")
+//	Run findById(@PathVariable Integer id) {
+//		Optional<Run> run =  runRepository.findById(id);
+//		if(run.isEmpty()) {
+//			throw new RunNotFoundException();
+//		}
+//		
+//		return run.get();
+//	}
+//	
+//	@ResponseStatus(HttpStatus.CREATED)
+//	@PostMapping("/createrun")
+//	String createRun(@Valid @RequestBody Run run) {
+//		runRepository.createRun(run);
+//		return "Record created successfully";
+//	}
+//	
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	@PutMapping("/updaterun/{id}")
+//	String updateRun(@Valid @RequestBody Run run, @PathVariable Integer id) {
+//		runRepository.updateRun(run, id);
+//		return "Record updated successfully";
+//	}
+//	
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	@DeleteMapping("/deleterun/{id}") 
+//	String deleteRun(@PathVariable Integer id) {
+//		runRepository.deleteRun(id);
+//		return "Record deleted successfully";
+//	}
 }
