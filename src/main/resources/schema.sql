@@ -6,4 +6,5 @@ CREATE TABLE IF NOT EXISTS Run(
 	miles INT NOT NULL,
 	location varchar(32) NOT NULL,
 	PRIMARY KEY (id)
+	
 );

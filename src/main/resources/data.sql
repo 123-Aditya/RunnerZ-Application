@@ -1,2 +1,20 @@
-INSERT INTO Run (id, title, started_on, completed_on, miles, location)
-VALUES (1, 'Morning Run', '2017-01-01 06:00:00', '2017-01-01 07:00:00', 3, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (1, 'Morning Run', '2017-01-01 06:00:00', '2017-01-01 07:00:00', 3, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (2, 'Evening Run', '2017-01-02 19:00:00', '2017-01-02 20:00:00', 2, 'INDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (3, 'Morning Run', '2017-01-04 19:00:00', '2017-01-04 20:30:00', 5, 'INDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (4, 'Morning Run', '2017-01-05 18:00:00', '2017-01-05 19:00:00', 3, 'INDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (5, 'Morning Run', '2017-01-06 06:00:00', '2017-01-06 07:00:00', 3, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (6, 'Morning Run', '2017-01-08 06:00:00', '2017-01-08 07:00:00', 3, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (7, 'Morning Run', '2017-01-10 06:00:00', '2017-01-10 06:30:00', 2, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (8, 'Morning Run', '2017-01-12 06:00:00', '2017-01-12 08:00:00', 5, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (9, 'Morning Run', '2017-01-15 06:00:00', '2017-01-15 07:30:00', 4, 'OUTDOOR');
+--INSERT INTO Run (id, title, started_on, completed_on, miles, location)
+--VALUES (10, 'Morning Run', '2017-01-20 06:00:00', '2017-01-20 07:30:00', 4, 'OUTDOOR');
