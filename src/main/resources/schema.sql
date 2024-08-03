@@ -4,6 +4,8 @@ CREATE TABLE IF NOT EXISTS Users (
     lastname VARCHAR(64) NOT NULL,
     age INT NOT NULL,
     gender VARCHAR(8) NOT NULL,
+    username VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL,
     PRIMARY KEY (useridpk)
 );
 

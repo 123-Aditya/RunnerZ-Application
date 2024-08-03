@@ -74,6 +74,14 @@ public class RunRepository {
 				.list();
 	}
 	
+	public List<Run> findForSpecificUser(String username) {
+	return jdbcClient.sql("select * from run where useridpk = (select useridpk from users where username = :username)")
+			.param("username", username)
+			.query(Run.class)
+			.list();
+	}
+	 
+	
 	
 //	@PostConstruct
 //	private void init() {

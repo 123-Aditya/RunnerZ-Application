@@ -20,7 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/api/runs")
+@RequestMapping(IConstants.BASE_URL)
 public class RunController {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(RunController.class);
@@ -31,13 +31,13 @@ public class RunController {
 		this.runRepository = runRepository;
 	}
 	
-	@GetMapping("/welcome")
+	@GetMapping(IConstants.WELCOME_URL)
 	String name() {
 		LOG.info("Returning response for /hello mapping");
-		return "Welcome to RunnerZ!";
+		return IConstants.WELCOME_MESSAGE + IConstants.EXCLAMATION;
 	}
 	
-	@GetMapping("")
+	@GetMapping(IConstants.EMPTY_URL)
 	List<Run> findAll() {
 		return runRepository.findAll();
 	}
@@ -52,24 +52,37 @@ public class RunController {
 		return run.get();
 	}
 	
+	@GetMapping(IConstants.TOTAL_MILES_URL)
+	int findTotalMilesRan(@PathVariable String username) {
+		List<Run> runs =  runRepository.findForSpecificUser(username);
+		if(runs.isEmpty()) {
+			throw new RunNotFoundException();
+		}
+		int totalMiles = 0;
+		for(int i=0;i<runs.size();i++) {
+			totalMiles += runs.get(i).miles();
+		}
+		return totalMiles;
+	}
+	
 	@ResponseStatus(HttpStatus.CREATED)
-	@PostMapping("/createrun")
+	@PostMapping(IConstants.SAVE_RUN_URL)
 	String createRun(@Valid @RequestBody Run run) {
 		runRepository.createRun(run);
-		return "Record created successfully";
+		return IConstants.CREATED_SUCCESSFULLY;
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@PutMapping("/updaterun/{id}")
+	@PutMapping(IConstants.EDIT_RUN_URL)
 	String updateRun(@Valid @RequestBody Run run, @PathVariable Integer id) {
 		runRepository.updateRun(run, id);
-		return "Record updated successfully";
+		return IConstants.EDITED_SUCCESSFULLY;
 	}
 	
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("/deleterun/{id}") 
+	@DeleteMapping(IConstants.DELETE_RUN_URL) 
 	String deleteRun(@PathVariable Integer id) {
 		runRepository.deleteRun(id);
-		return "Record deleted successfully";
+		return IConstants.DELETED_SUCCESSFULLY;
 	}
 }
