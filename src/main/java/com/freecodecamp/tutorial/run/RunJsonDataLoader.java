@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@Component
+//@Component
 public class RunJsonDataLoader implements CommandLineRunner {
 
 	private static final Logger LOG = LoggerFactory.getLogger(RunJsonDataLoader.class);
