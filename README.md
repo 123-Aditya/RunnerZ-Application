@@ -1,6 +1,6 @@
 # RunnerZ-Application
 
-Frontend - Angular
+Technology Used:
 Backend - SpringBoot
 DB - H2 (Can use Firebase/MongoDB ?)
 
