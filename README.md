@@ -2,14 +2,15 @@
 
 Technology Used:
 Backend - SpringBoot
-DB - H2 (Can use Firebase/MongoDB ?)
+DB - H2
 
 
 Features:-
-- User account creation, login/logout - session
-- Database use
 - CRUD operations
+- Database use
 - Total miles ran
+
+New features to add:-
 - Filter - Miles ran within given start date and end date
 - Highest record till date
 - Highest Streak maintained
@@ -21,10 +22,5 @@ Features:-
 - Top 5 records of users per week
 - Current user ranking - among all users - per week
 - Weekly status report sent to user on email
-
-
-
-Challenges/Open Questions:-
-- Where should user session be managed - frontend layer or backend layer?
 
 
